@@ -1,0 +1,35 @@
+body {
+    background-color: burlywood;
+}
+
+p {
+    background-color: beige;
+    color: brown;
+}
+
+h1 {
+    background-color: black;
+    color: blanchedalmond;
+}
+
+h4 {
+    background-color: darkcyan;
+    color: firebrick;
+}
+
+ul {
+    background-color: bisque;
+    color: coral;
+}
+
+ol {
+    background-color: darkseagreen;
+    color: gold;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
