@@ -17,10 +17,6 @@ h4 {
     color: firebrick;
 }
 
-ul {
-    background-color: bisque;
-    color: coral;
-}
 
 ol {
     background-color: darkseagreen;
@@ -32,4 +28,60 @@ img {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+ul {
+    display: inline-block;
+    background-color: bisque;
+    color: coral;
+    border: 1px dashed black;
+    list-style: none; 
+    padding: 1px;   
+    position: relative; /* Needed to control the layout of <li> elements */
+}
+
+li  {
+    text-align: center;
+    list-style-position: inside;
+    border: 2px solid rgb(240, 172, 70);
+    border-radius: 5px;  
+    position: relative;
+    margin: 8px;
+    
+}
+
+a::before {
+    content: "•";      /* Custom marker (bullet) */
+    position: absolute;
+    left: 0;           /* Position the marker on the left */
+    top: 50%;          /* Vertically center the marker */
+    transform: translateY(-50%); /* Fine-tune the vertical alignment */
+    font-size: 24px;   /* Size of the marker */
+    color: coral;      /* Marker color (same as link color) */
+    pointer-events: none; /* Make sure it doesn't interfere with click events */
+}
+
+a::after {
+    content: "•";      /* Custom marker (bullet) on the right */
+    position: absolute;
+    right: 0;          /* Position the marker on the right */
+    top: 50%;          /* Vertically center the marker */
+    transform: translateY(-50%); /* Fine-tune the vertical alignment */
+    font-size: 24px;   /* Size of the marker */
+    color: coral;      /* Marker color (same as link color) */
+    pointer-events: none; /* Make sure it doesn't interfere with click events */
+}
+
+a   {
+    display: block;      /* Makes <a> a block element that fills the <li> */
+    padding: 6% 12px;        /* Padding inside the <a>, creating space around text */
+    text-decoration: none;  /* Remove underline by default */
+    color: coral;        /* Color of the link */
+    height: 100%;        /* Ensure <a> fills the full height of <li> */
+    width: 100%;         /* Ensure <a> fills the full width of <li> */
+    box-sizing: border-box; /* Ensure padding does not affect width/height */}
+
+li:hover {
+    background: rgb(217, 227, 233);     /* Background on hover */
+    text-decoration: wavy; /* Wavy underline on hover */
 }
